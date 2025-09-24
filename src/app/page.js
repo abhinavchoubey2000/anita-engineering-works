@@ -1,103 +1,151 @@
+import Button from "@/components/Button";
+import Card from "@/components/Card";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+	return (
+		<>
+			{/* Banner */}
+			<section
+				style={{
+					backdropFilter: "blur(50px)",
+					background: "url(/images/home/landing-page.jpg)",
+				}}
+			>
+				<div className="lg:h-screen w-full py-20 backdrop-blur-[10px] flex flex-col items-center justify-center">
+					<div className="flex flex-col items-center  lg:block">
+						<h1 className="lg:text-heading-banner lg:text-left text-heading-banner-mobile text-center font-poppins text-white">
+							ANITA <span className="text-custom-yellow">ENGINEERING</span>{" "}
+							WORKS
+						</h1>
+						<h2 className="lg:text-sub-heading-banner lg:text-left text-center text-sub-heading-banner-mobile font-poppins text-white">
+							Precision <span className="text-custom-yellow">fasteners</span>{" "}
+							for every industry
+						</h2>
+						<Button
+							label={"Find out more"}
+							className="hover:bg-black hover:text-white lg:px-14 lg:my-6 my-6 px-10"
+						/>
+					</div>
+				</div>
+			</section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+			{/* Product Categories */}
+			<section className="bg-custom-gray px-10 py-12">
+				<h2 className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile">
+					OUR PRODUCTS
+				</h2>
+				<div className="flex lg:flex-row flex-wrap lg:gap-10 gap-5 justify-center py-10">
+					<Card
+						image="/images/home/category-screws.png"
+						title="Screws"
+						link="/screws"
+					/>
+					<Card
+						image="/images/home/category-washers.png"
+						title="Washers"
+						link="/washers"
+					/>
+					<Card
+						image="/images/home/category-others.png"
+						title="Others"
+						link="/others"
+					/>
+				</div>
+			</section>
+
+			{/* Company */}
+			<section className="w-full flex lg:flex-row flex-col-reverse">
+				<div className="lg:w-[50%] w-[100%] bg-custom-yellow px-10 py-12 flex flex-col gap-6">
+					<h2 className="lg:text-heading text-heading-mobile font-poppins text-white text-center">
+						Anita Engineering Works
+					</h2>
+					<p className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify">
+						Anita Engineering Works, established in 1998, is a trusted name in
+						the field of fastener manufacturing. We specialize in the production
+						of screws, bolts, nuts, and precision fasteners designed for diverse
+						industrial applications. With over two decades of expertise, we have
+						developed a reputation for delivering quality, reliability, and
+						consistency. Our modern facility is equipped with advanced headers,
+						rolling machines, and BT cut machines. This infrastructure enables
+						us to achieve high-volume production with uncompromised accuracy.
+					</p>
+				</div>
+				<div
+					className="lg:w-[50%] w-[100%] lg:h-[100vh] h-[50vh]"
+					style={{ background: "url(images/home/company.jpg)" }}
+				></div>
+			</section>
+
+			{/* Certifications */}
+			<section className="bg-custom-gray">
+				<div className="px-10 py-12">
+					<h2 className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile">
+						CERTIFICATIONS AND AUTHORIZATIONS
+					</h2>
+					<p className="lg:text-normal font-roboto lg:tracking-text text-normal-mobile tracking-text-mobile">
+						Because we a trusted compnay, we are very transparent with our
+						clients. Here are our certifications which make us more reliable and
+						trusted in this industry.
+					</p>
+				</div>
+				<div className="flex flex-col items-center">
+					<div className="flex lg:flex-row flex-col gap-20 py-12">
+						<Image
+							src="/images/home/certificate.jpg"
+							alt="certificate"
+							className="rounded-2xl border-2 border-black shadow-2xl"
+							height={"400"}
+							width={"400"}
+						/>
+						<Image
+							src="/images/home/certificate.jpg"
+							alt="certificate"
+							className="rounded-2xl border-2 border-black shadow-2xl"
+							height={"400"}
+							width={"400"}
+						/>
+					</div>
+					<Button
+						label={"Know more about us"}
+						className="hover:bg-black hover:text-white px-14 my-6"
+					/>
+				</div>
+			</section>
+
+			{/* Custom Fastners */}
+			<section
+				style={{
+					background: "url(/images/home/custom-fastner.jpg)",
+				}}
+			>
+				<div
+					style={{
+						width: "100%",
+						backdropFilter: "blur(10px)",
+						WebkitBackdropFilter: "blur(10px)",
+						display: "flex",
+						flexDirection: "column",
+						justifyContent: "center",
+					}}
+					className="px-10 py-22"
+				>
+					<div>
+						<h1 className="lg:text-sub-heading-banner text-sub-heading-banner-mobile font-poppins text-white">
+							DO YOU WANT YOUR{" "}
+							<span className="text-custom-yellow">CUSTOM FASTENERS</span> ?
+						</h1>
+						<h2 className="lg:text-[1.8rem] text-[1rem] py-6 font-poppins text-white self-start">
+							Custom sizes, threading, head types, coatings, or CNC-turned parts
+							as per client drawing/specification.
+						</h2>
+						<Button
+							label={"Contact Us"}
+							className="hover:bg-black hover:text-white px-14 my-6"
+						/>
+					</div>
+				</div>
+			</section>
+		</>
+	);
 }

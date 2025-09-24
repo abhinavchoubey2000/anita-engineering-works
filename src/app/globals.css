@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+	transform: translateX();
 }
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+	--font-poppins: var(--font-poppins);
+	--font-roboto: var(--font-roboto);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+	/* Colors */
+	--color-custom-yellow: #ffde00;
+	--color-custom-gray: #f1f1f1;
+	--color-light-text: #0000007d;
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	/* Tracking */
+	--tracking-text: 0.0625rem; /* 1px */
+
+	/* Desktop text sizes */
+	--text-heading-banner: 5.3125rem; /* 85px */
+	--text-sub-heading-banner: 2.75rem; /* 44px */
+	--text-heading: 3rem; /* 48px */
+	--text-product-title: 3.1rem; /* 49.6px */
+	--text-product-view: 2.40625rem; /* 38.5px */
+	--text-normal: 1.125rem; /* 18px */
+	--text-footer-heading: 2.375rem; /* 38px */
+	--text-footer-text: 2.125rem; /* 34px */
+
+	/* Mobile text sizes */
+	--text-heading-banner-mobile: 2.5rem; /* ~48px */
+	--text-sub-heading-banner-mobile: 1.2rem; /* ~28px */
+	--text-heading-mobile: 1.5rem; /* ~36px */
+	--text-product-title-mobile: 2.5rem; /* ~40px */
+	--text-product-view-mobile: 1.75rem; /* ~28px */
+	--text-normal-mobile: 0.8rem; /* ~16px */
+	--text-footer-heading-mobile: 1.75rem; /* ~28px */
+	--text-footer-text-mobile: 1.5rem; /* ~24px */
+
+	/* Mobile tracking */
+	--tracking-text-mobile: 0.05rem; /* ~0.8px */
 }
