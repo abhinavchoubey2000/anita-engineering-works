@@ -8,8 +8,11 @@ export default function Card({
 	title = "Cart",
 	image = "",
 	link = "",
+	icon,
+	info,
 	description = "",
 	classname = "",
+	width = "w-full",
 }) {
 	return type === "category" ? (
 		<div className="bg-white inline-flex flex-col flex-wrap lg:w-xs w-[10rem] h-[10rem] items-end rounded-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] relative">
@@ -34,6 +37,18 @@ export default function Card({
 				height={1000}
 				width={1000}
 			/>
+		</div>
+	) : type === "info" ? (
+		<div
+			className={` cursor-pointer px-8 py-5 my-5 bg-custom-gray flex lg:${width} rounded-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] relative gap-3 ${classname}`}
+		>
+			{icon}
+			<div className="flex flex-col gap-1 tracking-text text-4xl">
+				<h4 className="tracking-text font-poppins">{title}</h4>
+				<span className="opacity-50 text-normal tracking-text font-roboto">
+					{info}
+				</span>
+			</div>
 		</div>
 	) : null;
 }
