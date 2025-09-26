@@ -1,6 +1,8 @@
+"use client";
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 import Logo from "./Logo";
+import { usePathname } from "next/navigation";
 
 function Header({
 	listOfLinks = [],
@@ -9,6 +11,7 @@ function Header({
 	linkBgColorHover,
 	linkColorHover,
 }) {
+	const pathname = usePathname();
 	return (
 		<>
 			<nav
@@ -18,7 +21,11 @@ function Header({
 					{listOfLinks.map((link) => (
 						<Link
 							key={link.path}
-							className={`hover:${linkBgColorHover} hover:${linkColorHover} py-5 px-4 transition-all duration-300 tracking-text`}
+							className={
+								pathname !== link.path
+									? `hover:${linkBgColorHover} hover:${linkColorHover} py-5 px-4 transition-all duration-300 tracking-text`
+									: `bg-black text-white py-5 px-4 transition-all duration-300 tracking-text`
+							}
 							href={link.path}
 						>
 							{link.name}
