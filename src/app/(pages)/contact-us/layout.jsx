@@ -5,7 +5,7 @@ export default function Layout({ children }) {
 	return (
 		<>
 			<Banner image="/images/home/custom-fastner.jpg">
-				<h1 className="text-heading-banner font-poppins text-white">
+				<h1 className="lg:text-heading-banner text-heading-banner-mobile font-poppins text-white">
 					CONTACT US
 				</h1>
 			</Banner>

@@ -35,12 +35,12 @@ export default function AboutUs() {
 			</section>
 
 			{/* Who we are */}
-			<section className="flex flex-row-reverse gap-16 px-10 py-12">
-				<div className="w-[50%]">
-					<h2 className="font-poppins text-heading tracking-text text-custom-yellow text-right">
+			<section className="flex lg:flex-row-reverse flex-col-reverse gap-16 px-10 py-12">
+				<div className="lg:w-[50%]">
+					<h2 className="font-poppins text-heading-mobile lg:text-heading lg:tracking-text tracking-text-mobile text-custom-yellow lg:text-right">
 						WHO WE ARE?
 					</h2>
-					<p className="font-roboto tracking-text text-normal text-justify">
+					<p className="font-roboto lg:tracking-text tracking-text-mobile text-normal-mobile lg:text-normal text-justify">
 						Anita Engineering Works, established in 1998, is a trusted name in
 						the field of fastener manufacturing. We specialize in the production
 						of screws, bolts, nuts, and precision fasteners designed for diverse
@@ -50,7 +50,7 @@ export default function AboutUs() {
 					</p>
 				</div>
 
-				<div className="w-[50%]">
+				<div className="lg:w-[50%]">
 					<Image
 						src={"/images/about-us/who-we-are.jpg"}
 						alt="Who we are"
@@ -62,12 +62,12 @@ export default function AboutUs() {
 			</section>
 
 			{/* Our modern facilities */}
-			<section className="flex flex-row bg-custom-gray gap-16 px-10 py-12">
-				<div className="w-[50%]">
-					<h2 className="font-poppins text-heading tracking-text text-custom-yellow">
+			<section className="flex lg:flex-row flex-col-reverse bg-custom-gray gap-16 px-10 py-12">
+				<div className="lg:w-[50%]">
+					<h2 className="font-poppins lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile text-custom-yellow">
 						OUR MODERN FACILITIES
 					</h2>
-					<p className="font-roboto tracking-text text-normal text-justify">
+					<p className="font-roboto lg:tracking-text lg:text-normal text-normal-mobile tracking-text-mobile text-justify">
 						Our modern facility is equipped with advanced headers, rolling
 						machines, and BT cut machines. This infrastructure enables us to
 						achieve high volume production with uncompromised accuracy. Each
@@ -77,7 +77,7 @@ export default function AboutUs() {
 					</p>
 				</div>
 
-				<div className="w-[50%]">
+				<div className="lg:w-[50%]">
 					<Image
 						src={"/images/about-us/our-modern-facilities.jpg"}
 						alt="Who we are"
@@ -89,12 +89,12 @@ export default function AboutUs() {
 			</section>
 
 			{/* Our workforces */}
-			<section className="flex flex-row-reverse gap-16 px-10 py-12">
-				<div className="w-[50%]">
-					<h2 className="font-poppins text-heading tracking-text text-custom-yellow text-right">
+			<section className="flex lg:flex-row-reverse flex-col-reverse gap-16 px-10 py-12">
+				<div className="lg:w-[50%]">
+					<h2 className="font-poppins lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile text-custom-yellow lg:text-right">
 						OUR WORKFORCES
 					</h2>
-					<p className="font-roboto tracking-text text-normal text-justify">
+					<p className="font-roboto lg:tracking-text lg:text-normal tracking-text-mobile text-normal-mobile text-justify">
 						Our skilled workforce combines technical knowledge with practical
 						expertise to maintain excellence. We are committed to providing cost
 						effective, durable, and innovative fastening solutions. Timely
@@ -104,7 +104,7 @@ export default function AboutUs() {
 					</p>
 				</div>
 
-				<div className="w-[50%]">
+				<div className="lg:w-[50%]">
 					<Image
 						src={"/images/about-us/our-workforces.jpg"}
 						alt="Who we are"
@@ -116,12 +116,12 @@ export default function AboutUs() {
 			</section>
 
 			{/* Our mission */}
-			<section className="flex flex-row bg-custom-gray gap-16 px-10 py-12">
-				<div className="w-[50%]">
-					<h2 className="font-poppins text-heading tracking-text text-custom-yellow">
+			<section className="flex lg:flex-row flex-col-reverse bg-custom-gray gap-16 px-10 py-12">
+				<div className="lg:w-[50%]">
+					<h2 className="font-poppins lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile text-custom-yellow">
 						OUR MISSION
 					</h2>
-					<p className="font-roboto tracking-text text-normal text-justify">
+					<p className="font-roboto lg:tracking-text lg:text-normal  text-normal-mobile tracking-text-mobile text-justify">
 						The company focuses on building long-term, mutually beneficial
 						relationships with all stakeholders. Customer satisfaction is
 						central to our philosophy and drives our growth. We emphasize the
@@ -131,7 +131,7 @@ export default function AboutUs() {
 					</p>
 				</div>
 
-				<div className="w-[50%]">
+				<div className="lg:w-[50%]">
 					<Image
 						src={"/images/about-us/our-mission.jpg"}
 						alt="Who we are"

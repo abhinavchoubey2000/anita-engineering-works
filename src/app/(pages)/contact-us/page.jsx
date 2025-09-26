@@ -1,20 +1,20 @@
 import Card from "@/components/Card";
 import React from "react";
-import { Phone, Home, Mail } from "lucide-react";
+import { Phone, Mail, House } from "lucide-react";
 import Button from "@/components/Button";
 
 export default function ContactUs() {
 	return (
 		<>
 			<section>
-				<h3 className="text-heading text-custom-yellow font-poppins">
+				<h3 className="lg:text-heading text-heading-mobile text-custom-yellow font-poppins">
 					GET IN TOUCH
 				</h3>
 
-				<div className="flex gap-5 ">
+				<div className="flex lg:flex-row flex-col gap-5 ">
 					{/* Contact Details */}
-					<div className="w-[50%] h-[70vh]">
-						<p className="text-normal font-roboto text-justify tracking-text">
+					<div className="lg:w-[50%] lg:h-[70vh]">
+						<p className="lg:text-normal text-normal-mobile font-roboto text-justify lg:tracking-text tracking-text-mobile">
 							As a trusted manufacturer of high-quality screws, we aim to
 							provide reliable solutions for every industry. Contact us for
 							inquiries, bulk orders, or partnership opportunities. Our experts
@@ -34,7 +34,7 @@ export default function ContactUs() {
 								type="info"
 							/>
 							<Card
-								icon={<Home className="text-custom-yellow" size={30} />}
+								icon={<House className="text-custom-yellow" size={30} />}
 								title="Address"
 								info="Anita Engineering Works, Shabad Daulatpur, Delhi – 110042, India"
 								type="info"
@@ -42,12 +42,12 @@ export default function ContactUs() {
 						</div>
 					</div>
 					{/* Contact Form */}
-					<div className="w-[50%] flex gap-3 flex-col justify-center items-center h-full bg-custom-yellow rounded-lg px-10 py-10">
+					<div className="lg:w-[50%] flex gap-3 flex-col justify-center items-center h-full bg-custom-yellow rounded-lg lg:px-10 px-2 py-10">
 						<div className="w-full flex flex-col gap-5">
-							<div className="flex gap-3">
+							<div className="flex lg:flex-row flex-col gap-3">
 								<div className="flex flex-col w-full">
 									<label
-										className="font-roboto tracking-text text-normal"
+										className="font-roboto lg:tracking-text lg:text-normal tracking-text-mobile text-normal-mobile"
 										htmlFor="name"
 									>
 										Name
@@ -55,40 +55,40 @@ export default function ContactUs() {
 									<input
 										type="text"
 										id="name"
-										className="font-roboto tracking-text bg-white text-normal px-2 py-2 outline-custom-yellow"
+										className="font-roboto lg:tracking-text tracking-text-mobile text-normal-mobile bg-white lg:text-normal px-2 py-2 outline-custom-yellow"
 									/>
 								</div>
 								<div className="flex flex-col w-full">
 									<label
 										htmlFor="phone"
-										className="font-roboto tracking-text text-normal"
+										className="font-roboto lg:tracking-text lg:text-normal tracking-text-mobile text-normal-mobile"
 									>
 										Phone
 									</label>
 									<input
 										type="text"
 										id="phone"
-										className="font-roboto tracking-text bg-white text-normal px-2 py-2 outline-custom-yellow "
+										className="font-roboto lg:tracking-text tracking-text-mobile text-normal-mobile bg-white lg:text-normal px-2 py-2 outline-custom-yellow"
 									/>
 								</div>
 							</div>
 							<div className="flex flex-col w-full">
 								<label
 									htmlFor="email"
-									className="font-roboto tracking-text text-normal"
+									className="font-roboto lg:tracking-text lg:text-normal tracking-text-mobile text-normal-mobile"
 								>
 									Email
 								</label>
 								<input
 									type="text"
 									id="email"
-									className="font-roboto tracking-text bg-white text-normal px-2 py-2 outline-custom-yellow "
+									className="font-roboto lg:tracking-text tracking-text-mobile text-normal-mobile bg-white lg:text-normal px-2 py-2 outline-custom-yellow"
 								/>
 							</div>
 							<div className="flex flex-col w-full">
 								<label
 									htmlFor="message"
-									className="font-roboto tracking-text text-normal "
+									className="font-roboto lg:tracking-text lg:text-normal tracking-text-mobile text-normal-mobile"
 								>
 									Message
 								</label>
@@ -96,7 +96,7 @@ export default function ContactUs() {
 									rows={6}
 									type="text"
 									id="message"
-									className="resize-none font-roboto tracking-text bg-white text-normal px-2 py-2 outline-custom-yellow "
+									className="resize-none font-roboto lg:tracking-text tracking-text-mobile text-normal-mobile bg-white lg:text-normal px-2 py-2 outline-custom-yellow"
 								/>
 							</div>
 						</div>

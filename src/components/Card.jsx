@@ -42,10 +42,12 @@ export default function Card({
 		<div
 			className={` cursor-pointer px-8 py-5 my-5 bg-custom-gray flex lg:${width} rounded-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] relative gap-3 ${classname}`}
 		>
-			{icon}
-			<div className="flex flex-col gap-1 tracking-text text-4xl">
-				<h4 className="tracking-text font-poppins">{title}</h4>
-				<span className="opacity-50 text-normal tracking-text font-roboto">
+			<span>{icon}</span>
+			<div className="flex flex-col gap-1 tracking-text-mobile lg:tracking-text text-xl lg:text-4xl">
+				<h4 className="lg:tracking-text tracking-text-mobile font-poppins">
+					{title}
+				</h4>
+				<span className="opacity-50 text-normal-mobile lg:text-normal tracking-text-mobile lg:tracking-text font-roboto">
 					{info}
 				</span>
 			</div>
