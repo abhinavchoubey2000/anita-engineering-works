@@ -1,8 +1,65 @@
 import Button from "@/components/Button";
 import Card from "@/components/Card";
+import Partners from "@/components/Partners";
 import Image from "next/image";
 
 export default function Home() {
+	const partners = [
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+	];
 	return (
 		<>
 			{/* Banner */}
@@ -31,7 +88,7 @@ export default function Home() {
 			</section>
 
 			{/* Product Categories */}
-			<section className="bg-custom-gray px-10 py-12">
+			<section className="bg-custom-gray lg:px-10 lg:py-12 px-2 py-4">
 				<h2 className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile">
 					OUR PRODUCTS
 				</h2>
@@ -56,7 +113,7 @@ export default function Home() {
 
 			{/* Company */}
 			<section className="w-full flex lg:flex-row flex-col-reverse">
-				<div className="lg:w-[50%] w-[100%] bg-custom-yellow px-10 py-12 flex flex-col gap-6">
+				<div className="lg:w-[50%] w-[100%] bg-custom-yellow lg:px-10 lg:py-12 px-2 py-4 flex flex-col gap-6">
 					<h2 className="lg:text-heading text-heading-mobile font-poppins text-white text-center">
 						Anita Engineering Works
 					</h2>
@@ -77,9 +134,12 @@ export default function Home() {
 				></div>
 			</section>
 
+			{/* Partners */}
+			<Partners logosArray={partners} />
+
 			{/* Certifications */}
 			<section className="bg-custom-gray">
-				<div className="px-10 py-12">
+				<div className="lg:px-10 lg:py-12 px-2 py-4">
 					<h2 className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile">
 						CERTIFICATIONS AND AUTHORIZATIONS
 					</h2>

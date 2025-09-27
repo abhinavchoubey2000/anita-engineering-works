@@ -9,7 +9,7 @@ export default function Layout({ children }) {
 					CONTACT US
 				</h1>
 			</Banner>
-			<div className="px-10 py-12">{children}</div>
+			<div className="lg:px-10 lg:py-12 px-2 py-4">{children}</div>
 		</>
 	);
 }

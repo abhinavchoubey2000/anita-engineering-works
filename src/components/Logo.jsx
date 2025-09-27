@@ -15,7 +15,7 @@ export default function Logo({
 			className={className}
 			style={{ width, height }}
 			loading="lazy"
-			height={100}
+			height={1000}
 			alt={alt}
 		/>
 	);

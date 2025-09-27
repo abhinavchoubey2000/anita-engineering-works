@@ -5,13 +5,69 @@ import Image from "next/image";
 import Button from "@/components/Button";
 
 export default function AboutUs() {
+	const partners = [
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+		"/images/partners/ericsson.png",
+		"/images/partners/jio.png",
+		"/images/partners/lg.png",
+		"/images/partners/oakter.png",
+		"/images/partners/ola.png",
+		"/images/partners/vvdn.png",
+	];
 	return (
 		<>
 			{/* Our partners */}
-			<Partners />
+			<Partners title={"OUR PARTNERS"} logosArray={partners} />
 
 			{/* Products we manufacture */}
-			<section className="bg-custom-gray px-10 py-12">
+			<section className="bg-custom-gray lg:px-10 lg:py-12 px-2 py-4">
 				<h2 className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile">
 					PRODUCTS WE MANUFACTURE
 				</h2>
@@ -35,7 +91,7 @@ export default function AboutUs() {
 			</section>
 
 			{/* Who we are */}
-			<section className="flex lg:flex-row-reverse flex-col-reverse gap-16 px-10 py-12">
+			<section className="flex lg:flex-row-reverse flex-col-reverse gap-16 lg:px-10 lg:py-12 px-2 py-4">
 				<div className="lg:w-[50%]">
 					<h2 className="font-poppins text-heading-mobile lg:text-heading lg:tracking-text tracking-text-mobile text-custom-yellow lg:text-right">
 						WHO WE ARE?
@@ -62,7 +118,7 @@ export default function AboutUs() {
 			</section>
 
 			{/* Our modern facilities */}
-			<section className="flex lg:flex-row flex-col-reverse bg-custom-gray gap-16 px-10 py-12">
+			<section className="flex lg:flex-row flex-col-reverse bg-custom-gray gap-16 lg:px-10 lg:py-12 px-2 py-4">
 				<div className="lg:w-[50%]">
 					<h2 className="font-poppins lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile text-custom-yellow">
 						OUR MODERN FACILITIES
@@ -89,7 +145,7 @@ export default function AboutUs() {
 			</section>
 
 			{/* Our workforces */}
-			<section className="flex lg:flex-row-reverse flex-col-reverse gap-16 px-10 py-12">
+			<section className="flex lg:flex-row-reverse flex-col-reverse gap-16 lg:px-10 lg:py-12 px-2 py-4">
 				<div className="lg:w-[50%]">
 					<h2 className="font-poppins lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile text-custom-yellow lg:text-right">
 						OUR WORKFORCES
@@ -116,7 +172,7 @@ export default function AboutUs() {
 			</section>
 
 			{/* Our mission */}
-			<section className="flex lg:flex-row flex-col-reverse bg-custom-gray gap-16 px-10 py-12">
+			<section className="flex lg:flex-row flex-col-reverse bg-custom-gray gap-16 lg:px-10 lg:py-12 px-2 py-4">
 				<div className="lg:w-[50%]">
 					<h2 className="font-poppins lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile text-custom-yellow">
 						OUR MISSION
