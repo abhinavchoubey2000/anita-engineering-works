@@ -12,13 +12,16 @@ export default function Sidebar({
 	linkColorHover,
 }) {
 	const sidebarRef = useRef(null);
+	const transparentRef = useRef(null);
 	const pathname = usePathname();
 
 	function showSidebar() {
 		sidebarRef.current.style.transform = "translateX(0)";
+		transparentRef.current.style.transform = "translateX(0)";
 	}
 	function hideSidebar() {
 		sidebarRef.current.style.transform = "translateX(-100%)";
+		transparentRef.current.style.transform = "translateX(-100%)";
 	}
 	return (
 		<div>
@@ -28,7 +31,7 @@ export default function Sidebar({
 
 			<aside
 				id="default-sidebar"
-				className="fixed top-0 left-0 z-40 w-64 h-screen transition-all"
+				className="fixed top-0 left-0 z-50 w-64 h-screen transition-all"
 				style={{ transform: "translateX(-100%)" }}
 				aria-label="Sidebar"
 				ref={sidebarRef}
@@ -40,6 +43,7 @@ export default function Sidebar({
 						</span>
 						{listOfLinks.map((link) => (
 							<Link
+								onClick={hideSidebar}
 								key={link.path}
 								className={
 									pathname !== link.path
@@ -55,6 +59,12 @@ export default function Sidebar({
 					<Logo height={90} width={"60%"} />
 				</div>
 			</aside>
+			<div
+				onClick={hideSidebar}
+				className="fixed w-full z-0 top-0 left-0 h-screen bg-transparent"
+				ref={transparentRef}
+				style={{ transform: "translateX(-100%)" }}
+			></div>
 		</div>
 	);
 }
