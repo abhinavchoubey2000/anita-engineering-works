@@ -1,0 +1,62 @@
+[
+	{
+		"name": "Binding Head",
+		"description": "Binding head screws have a low-profile, rounded head that provides a smooth surface finish. They are commonly used in applications requiring minimal protrusion, like electrical assemblies or light mechanical fastening.",
+		"path": "/images/screws/heads/binding-head.png",
+		"rotation": true
+	},
+	{
+		"name": "Button Head",
+		"description": "Button head screws feature a rounded, slightly domed head, offering a clean appearance. They provide moderate strength and are often used in decorative or visible applications where aesthetics and safety matter.",
+		"path": "/images/screws/heads/button-head.png",
+		"rotation": false
+	},
+	{
+		"name": "Cheese Head",
+		"description": "Cheese head screws have a cylindrical, flat-topped head with straight sides. They allow easy torque application using a screwdriver and are widely used in machinery where head height is not critical.",
+		"path": "/images/screws/heads/cheese-head.png",
+		"rotation": false
+	},
+	{
+		"name": "Combination Head",
+		"description": "Combination head screws are designed to accept multiple driver types, such as slotted, Phillips, or Pozidriv. They offer flexibility in installation, reducing the need for multiple screw types in a single project.",
+		"path": "/images/screws/heads/combination-head.png",
+		"rotation": false
+	},
+	{
+		"name": "Flange Head",
+		"description": "Flange head screws include a built-in washer beneath the head, distributing load over a larger area. They reduce surface stress, improve fastening strength, and are commonly used in automotive and structural applications.",
+		"path": "/images/screws/heads/flange-head.png",
+		"rotation": true
+	},
+	{
+		"name": "Flat Head",
+		"description": "Flat head screws are countersunk, allowing the screw to sit flush with or below the surface. Ideal for woodworking or metalwork, they provide a neat finish and prevent snagging on surfaces.",
+		"path": "/images/screws/heads/flat-head.png",
+		"rotation": true
+	},
+	{
+		"name": "Hex Head",
+		"description": "Hex head screws have a six-sided head, providing strong torque transfer with wrenches or sockets. They are ideal for heavy-duty applications requiring high clamping force, like machinery, construction, or automotive assembly.",
+		"path": "/images/screws/heads/hex-head.png",
+		"rotation": false
+	},
+	{
+		"name": "JCBC Screw",
+		"description": "JCBC screws follow standardized dimensions and threading, ensuring interchangeability. They are precision-made for mechanical engineering, electronics, and assembly, offering reliable strength and consistency across various industrial applications.",
+		"path": "/images/screws/heads/jcbc-screw.png",
+		"rotation": false
+	},
+	{
+		"name": "Pan Head",
+		"description": "Pan head screws have a slightly rounded, flat-topped head with wide bearing surface. They provide good torque distribution, are easy to drive, and are widely used in electronics, machinery, and furniture assembly.",
+		"path": "/images/screws/heads/pan-head.png",
+		"rotation": false
+	},
+	{
+		"name": "Socket Head",
+		"description": "Socket head screws have a cylindrical head with a recessed hex drive. Ideal for compact spaces, they provide high torque capacity, precision fastening, and are extensively used in mechanical and engineering assemblies.",
+		"path": "/images/screws/heads/socket-head.png",
+		"rotation": false
+	}
+]
