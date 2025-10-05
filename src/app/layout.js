@@ -78,7 +78,8 @@ export default function RootLayout({ children }) {
 	];
 	const contactDetails = {
 		address: `Shabad Daulatpur, Delhi – 110042, India`,
-		email: "aewmanish@gmail.com",
+		email_1: "aewmanish@gmail.com",
+		email_2:"anitaengineeringworks@gmail.com",
 		phone: "+91 95995-10490",
 	};
 	

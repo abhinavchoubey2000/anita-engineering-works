@@ -62,10 +62,20 @@ export default function Footer({
 					</div>
 					<div className="mail-id flex items-center gap-4 py-2">
 						<Mail size={18} className="text-custom-yellow" />
-						<p className="tracking-[2px] font-roboto text-[14px]">
-							{contactDetails.email}
-						</p>
+						<Link href={`mailto:${contactDetails.email_1}`}>
+							<p className="tracking-[2px] font-roboto text-[14px]">
+								{contactDetails.email_1}
+							</p>
+						</Link>
 					</div>
+					<Link href={`mailto:${contactDetails.email_1}`}>
+						<div className="mail-id flex items-center gap-4 py-2">
+							<Mail size={18} className="text-custom-yellow" />
+							<p className="tracking-[2px] font-roboto text-[14px]">
+								{contactDetails.email_2}
+							</p>
+						</div>
+					</Link>
 					<div className="phone-number flex items-center gap-4 py-2">
 						<PhoneCall size={18} className="text-custom-yellow" />
 						<p className="tracking-[2px] font-roboto text-[14px]">
