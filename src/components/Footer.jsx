@@ -54,12 +54,17 @@ export default function Footer({
 					CONTACT INFO
 				</h3>
 				<div>
-					<div className="address flex items-start gap-4 py-2">
-						<Home className="text-custom-yellow" />
-						<p className="tracking-[2px] font-roboto text-[14px]">
-							{contactDetails.address}
-						</p>
-					</div>
+					<Link
+						href={"https://maps.app.goo.gl/xLMG6gpp44emdeJp7"}
+						target="_blank"
+					>
+						<div className="address flex items-start gap-4 py-2">
+							<Home className="text-custom-yellow" />
+							<p className="tracking-[2px] font-roboto text-[14px]">
+								{contactDetails.address}
+							</p>
+						</div>
+					</Link>
 					<div className="mail-id flex items-center gap-4 py-2">
 						<Mail size={18} className="text-custom-yellow" />
 						<Link
@@ -81,12 +86,14 @@ export default function Footer({
 							</p>
 						</div>
 					</Link>
-					<div className="phone-number flex items-center gap-4 py-2">
-						<PhoneCall size={18} className="text-custom-yellow" />
-						<p className="tracking-[2px] font-roboto text-[14px]">
-							{contactDetails.phone}
-						</p>
-					</div>
+					<Link href={"https://wa.me/919599510490"} target="_blank">
+						<div className="phone-number flex items-center gap-4 py-2">
+							<PhoneCall size={18} className="text-custom-yellow" />
+							<p className="tracking-[2px] font-roboto text-[14px]">
+								{contactDetails.phone}
+							</p>
+						</div>
+					</Link>
 				</div>
 			</div>
 		</div>
