@@ -1,10 +1,10 @@
-import { Poppins, Roboto } from "next/font/google";
+import { Poppins, Roboto, Arimo } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 const roboto = Roboto({ variable: "--font-roboto", subsets: ["latin"] });
-
+const arimo = Arimo({ variable: "--font-roboto", subsets: ["latin"] });
 const poppins = Poppins({
 	variable: "--font-poppins",
 	subsets: ["latin"],
@@ -79,13 +79,13 @@ export default function RootLayout({ children }) {
 	const contactDetails = {
 		address: `Shabad Daulatpur, Delhi – 110042, India`,
 		email_1: "aewmanish@gmail.com",
-		email_2:"anitaengineeringworks@gmail.com",
+		email_2: "anitaengineeringworks@gmail.com",
 		phone: "+91 95995-10490",
 	};
-	
+
 	return (
 		<html lang="en">
-			<body className={`${roboto.variable} ${poppins.variable} antialiased`}>
+			<body className={`${arimo.variable} ${poppins.variable} antialiased`}>
 				<Header
 					listOfLinks={navigationList}
 					logo={"/images/logo.png"}
