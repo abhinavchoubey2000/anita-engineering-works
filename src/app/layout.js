@@ -55,7 +55,7 @@ export default function RootLayout({ children }) {
 		},
 		{
 			name: "Others",
-			path: "/other",
+			path: "/others",
 		},
 	];
 	const linksRow1 = [

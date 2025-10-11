@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Female to Female",
+		"description": "Female-to-female spacers feature threaded holes on both ends, allowing secure connections between two male fasteners. They provide precise spacing and stability in electronic, mechanical, and structural assemblies.",
+		"path": "/images/others/spacers/female-to-female-spacer.png",
+		"rotation": false
+	},
+	{
+		"name": "Male to Male",
+		"description": "Male-to-male spacers have external threads on both ends for connecting female-threaded components. They ensure firm alignment, accurate spacing, and reliable support in circuit boards and mechanical assemblies.",
+		"path": "/images/others/spacers/male-to-male-spacer.png",
+		"rotation": false
+	}
+]

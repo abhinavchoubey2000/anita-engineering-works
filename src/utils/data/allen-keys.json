@@ -1,0 +1,14 @@
+[
+	{
+		"name": "Silver",
+		"description": "Silver Allen keys are made from chrome-plated or stainless steel, offering superior corrosion resistance, durability, and a polished finish ideal for precision work in mechanical and industrial applications.",
+		"path": "/images/others/allen-keys/silver.png",
+		"rotation": true
+	},
+	{
+		"name": "Black",
+		"description": "Black Allen keys feature a black oxide or phosphate coating that enhances grip, prevents rust, and increases wear resistance, making them ideal for heavy-duty mechanical and maintenance applications.",
+		"path": "/images/others/allen-keys/black.png",
+		"rotation": true
+	}
+]

@@ -11,12 +11,12 @@ export default function Banner({
 			style={{
 				backdropFilter: "blur(50px)",
 				background: `url(${image})`,
+				backgroundSize: "cover",
 			}}
 		>
 			<div
 				className={`w-full lg:${height} py-20 backdrop-blur-[${blur}] flex flex-col items-center justify-center`}
 			>
-				
 				{children}
 			</div>
 		</div>

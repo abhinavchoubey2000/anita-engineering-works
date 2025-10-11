@@ -1,0 +1,26 @@
+[
+	{
+		"name": "Plain",
+		"description": "Plain washers provide a smooth bearing surface, distributing load evenly and preventing damage to assemblies. They reduce friction, ensure firm tightening, and maintain joint stability under various operating conditions.",
+		"path": "/images/others/washers/plain.png",
+		"rotation": true
+	},
+	{
+		"name": "Spring",
+		"description": "Spring washers prevent loosening caused by vibration or dynamic loads. Their spring-like design maintains tension, ensuring a secure connection and enhancing reliability in mechanical, automotive, and industrial applications.",
+		"path": "/images/others/washers/spring.png",
+		"rotation": true
+	},
+	{
+		"name": "External Tooth",
+		"description": "External tooth washers have outward-pointing teeth offering excellent locking ability. They enhance grip, prevent loosening, and maintain firm connections, making them suitable for high-vibration or heavy-duty fastening applications.",
+		"path": "/images/others/washers/external-tooth.png",
+		"rotation": true
+	},
+	{
+		"name": "Internal Tooth",
+		"description": "Internal tooth washers feature inward-facing teeth that bite into the surface, providing strong resistance to rotation. They’re ideal for electrical connections and assemblies requiring secure, vibration-resistant fastening.",
+		"path": "/images/others/washers/internal-tooth.png",
+		"rotation": true
+	}
+]

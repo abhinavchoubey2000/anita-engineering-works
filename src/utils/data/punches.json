@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Slotted",
+		"punch": "/images/screws/punches/slotted-punch.png",
+		"screw": "/images/screws/punches/slotted-screw.png",
+		"screwDriver": "/images/screws/punches/slotted-screwdriver.png"
+	},
+	{
+		"title": "Phillips",
+		"punch": "/images/screws/punches/philips-punch.png",
+		"screw": "/images/screws/punches/philips-screw.png",
+		"screwDriver": "/images/screws/punches/phillips-screwdriver.png"
+	},
+	{
+		"title": "Pozidriv",
+		"punch": "/images/screws/punches/pozidriv-punch.png",
+		"screw": "/images/screws/punches/pozidriv-screw.png",
+		"screwDriver": "/images/screws/punches/pozidriv-screwdriver.png"
+	},
+	{
+		"title": "Torx",
+		"punch": "/images/screws/punches/torx-punch.png",
+		"screw": "/images/screws/punches/torx-screw.png",
+		"screwDriver": "/images/screws/punches/torx-screwdriver.png"
+	},
+	{
+		"title": "Security Torx",
+		"punch": "/images/screws/punches/security-torx-punch.png",
+		"screw": "/images/screws/punches/security-torx-screw.png",
+		"screwDriver": "/images/screws/punches/security-torx-screwdriver.png"
+	},
+	{
+		"title": "Hexagon",
+		"punch": "/images/screws/punches/hexagon-punch.png",
+		"screw": "/images/screws/punches/hexagon-screw.png",
+		"screwDriver": "/images/screws/punches/hexagon-screwdriver.png"
+	}
+]

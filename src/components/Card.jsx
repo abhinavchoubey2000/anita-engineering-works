@@ -93,10 +93,10 @@ export default function Card({
 		<div
 			onMouseOver={handleMouseover}
 			onMouseOut={handleMouseout}
-			className="px-5 py-3 bg-white w-sm inline-flex flex-col rounded-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] relative"
+			className="lg:px-5 lg:py-3 px-2 py-2 bg-white lg:w-sm w-[10rem] inline-flex flex-col rounded-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] relative"
 		>
 			<div className="px-5 flex flex-col py-3">
-				<h3 className="lg:text-[2rem] text-[1.5rem] font-roboto lg:tracking-text tracking-text-mobile">
+				<h3 className="lg:text-[2rem] text-[1.2rem] font-roboto lg:tracking-text tracking-text-mobile">
 					{title}
 				</h3>
 			</div>
@@ -105,7 +105,7 @@ export default function Card({
 					rotate: rotation ? "45deg" : "0deg",
 				}}
 				ref={productImageRef}
-				className={`self-center object-contain w-[8rem] h-[6rem] lg:h-[10rem]`}
+				className={`self-center object-contain lg:w-[8rem] h-[5rem] lg:h-[10rem]`}
 				src={image}
 				alt={type}
 				height={1000}
@@ -116,7 +116,7 @@ export default function Card({
 				<Info
 					onMouseOver={handleInfoMouseover}
 					onMouseOut={handleInfoMouseout}
-					size={35}
+					size={20}
 					className="relative self-end text-custom-yellow"
 				/>
 			)}
@@ -124,7 +124,7 @@ export default function Card({
 			<div
 				ref={infoRef}
 				style={{ display: "none" }}
-				className="absolute bottom-15 right-5 w-[90%] px-4 py-3 text-[0.8rem] tracking-text font-roboto bg-custom-yellow rounded-lg text-justify shadow-2xl"
+				className="absolute bottom-15 right-5 w-[90%] px-4 py-3 lg:text-[0.8rem] lg:tracking-text text-[0.4rem] tracking-text-mobile font-roboto bg-custom-yellow rounded-lg text-justify shadow-2xl"
 			>
 				<p>{description}</p>
 			</div>

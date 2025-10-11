@@ -1,0 +1,68 @@
+[
+	{
+		"name": "Dome",
+		"description": "Dome nuts feature a smooth, rounded top that covers exposed bolt threads, providing a clean finish, protecting against corrosion, and enhancing safety in mechanical, decorative, and automotive applications.",
+		"path": "/images/others/nuts/dome-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Flange",
+		"description": "Flange nuts have a built-in washer-like base that distributes load evenly and prevents loosening. They ensure secure fastening, reducing the need for separate washers in high-vibration environments.",
+		"path": "/images/others/nuts/flange-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Hex",
+		"description": "Hex nuts are six-sided fasteners used with bolts and screws to create strong, reliable joints. Their versatile design ensures excellent torque control and easy installation in various applications.",
+		"path": "/images/others/nuts/hex-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Hex Weld",
+		"description": "Hex weld nuts are designed for permanent installation by welding onto metal surfaces. They provide robust, vibration-resistant threaded connections in automotive, fabrication, and heavy machinery applications.",
+		"path": "/images/others/nuts/hex-weld-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Lock",
+		"description": "Lock nuts feature a self-locking design that resists loosening under vibration and torque. They ensure long-term fastening stability, ideal for machinery, automotive, and structural applications.",
+		"path": "/images/others/nuts/lock-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Profile",
+		"description": "Profile nuts are slim, compact fasteners designed to fit into confined spaces or special profiles. They ensure strong, precise, and secure fastening in lightweight structures and modular assemblies.",
+		"path": "/images/others/nuts/profile-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Rivet",
+		"description": "Rivet nuts provide a permanent, load-bearing thread in thin materials where tapping is impractical. They’re ideal for sheet metal assemblies, offering high strength and easy installation.",
+		"path": "/images/others/nuts/rivet-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Square",
+		"description": "Square nuts have four sides, providing a larger contact area for better grip and resistance to loosening. They are commonly used in vintage designs, woodworking, and structural assemblies.",
+		"path": "/images/others/nuts/square-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Square Wild",
+		"description": "Square weld nuts are welded directly to metal surfaces to create durable, vibration-resistant threaded points. They’re ideal for automotive, fabrication, and heavy-duty industrial applications.",
+		"path": "/images/others/nuts/square-wild-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Tee",
+		"description": "Tee nuts have a flat base with prongs that dig into wood or metal, providing strong, flush-mounted threads. They’re widely used in furniture, fixtures, and machinery assemblies.",
+		"path": "/images/others/nuts/tee-nut.png",
+		"rotation": true
+	},
+	{
+		"name": "Wing",
+		"description": "Wing nuts feature two protruding “wings” for easy hand-tightening without tools. They’re perfect for applications requiring frequent adjustments or quick assembly and disassembly.",
+		"path": "/images/others/nuts/wing-nut.png",
+		"rotation": true
+	}
+]
