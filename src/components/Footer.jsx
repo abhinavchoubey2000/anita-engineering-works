@@ -15,7 +15,7 @@ export default function Footer({
 		<div className="px-10 py-10 flex lg:flex-row flex-col gap-15">
 			<div className="logo-description lg:w-[25%] w-full font-roboto text-normal flex flex-col gap-6">
 				<Logo />
-				<p className="text-[14px] tracking-[2px] text-justify">{description}</p>
+				<p className="text-[14px] tracking-[2px]">{description}</p>
 			</div>
 			<div className="links-row-1 flex flex-col lg:w-[25%] w-full gap-6">
 				<h3 className="text-custom-yellow text-normal font-roboto font-bold">
