@@ -65,19 +65,21 @@ export default function Home() {
 			{/* Banner */}
 			<section
 				style={{
-					backdropFilter: "blur(50px)",
-					background: "url(/images/home/landing-page.jpg)",
+					backdropFilter: "blur(2px)",
+					background: "url(/images/home/two.jpeg)",
+					backgroundSize:"cover",
+					backgroundPosition:"center",
+					backgroundRepeat:"no-repeat"
 				}}
 			>
 				<div className="lg:h-screen w-full py-20 backdrop-blur-[10px] flex flex-col items-center justify-center">
 					<div className="flex flex-col items-center  lg:block">
-						<h1 className="lg:text-heading-banner lg:text-left text-heading-banner-mobile text-center font-poppins text-white">
-							ANITA <span className="text-custom-yellow">ENGINEERING</span>{" "}
-							WORKS
+						<h1 className="lg:text-[6.5rem] lg:text-left lg:tracking-wide text-heading-banner-mobile text-center font-poppins text-white">
+							ANITA <span className="text-white">ENGINEERING</span> WORKS
 						</h1>
 						<h2 className="lg:text-sub-heading-banner lg:text-left text-center text-sub-heading-banner-mobile font-poppins text-white">
-							Precision <span className="text-custom-yellow">fasteners</span>{" "}
-							for every industry
+							Precision <span className="text-white">fasteners</span> for every
+							industry
 						</h2>
 						<Button
 							label={"Find out more"}
@@ -154,14 +156,14 @@ export default function Home() {
 						<Image
 							src="/images/home/certificate.jpg"
 							alt="certificate"
-							className="rounded-2xl border-2 border-black shadow-2xl"
+							className=" border-black border-4 shadow-2xl p-3"
 							height={"400"}
 							width={"400"}
 						/>
 						<Image
 							src="/images/home/certificate.jpg"
 							alt="certificate"
-							className="rounded-2xl border-2 border-black shadow-2xl"
+							className="border-black border-4 shadow-2xl p-3"
 							height={"400"}
 							width={"400"}
 						/>

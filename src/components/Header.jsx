@@ -38,7 +38,7 @@ function Header({
 					linkColorHover={"text-white"}
 				/>
 				<Link href={"/"}>
-					<Logo height={"40px"} width={"90px"} />
+					<Logo height={"70px"} width={"150px"} />
 				</Link>
 			</nav>
 		</>

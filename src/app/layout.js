@@ -1,4 +1,4 @@
-import { Poppins, Roboto, Arimo } from "next/font/google";
+import { Poppins, Roboto, Arimo, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,6 +9,11 @@ const poppins = Poppins({
 	variable: "--font-poppins",
 	subsets: ["latin"],
 	weight: ["600"],
+});
+const bebasNeue = Bebas_Neue({
+	variable: "--font-poppins",
+	subsets: ["latin"],
+	weight: ["400"],
 });
 
 export const metadata = {
@@ -85,7 +90,7 @@ export default function RootLayout({ children }) {
 
 	return (
 		<html lang="en">
-			<body className={`${arimo.variable} ${poppins.variable} antialiased`}>
+			<body className={`${arimo.variable} ${bebasNeue.variable} antialiased`}>
 				<Header
 					listOfLinks={navigationList}
 					logo={"/images/logo.png"}

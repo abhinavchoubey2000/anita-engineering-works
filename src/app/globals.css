@@ -8,8 +8,9 @@
 	--font-roboto: var(--font-roboto);
 
 	/* Colors */
-	--color-custom-yellow: #ffde00;
-	--color-custom-gray: #f1f1f1;
+	--color-custom-yellow: #75975e;
+	/* --color-custom-navigation::file-selector-button */
+	--color-custom-gray:#f5f5dc;
 	--color-light-text: #0000007d;
 
 	/* Tracking */
