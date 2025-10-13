@@ -2,6 +2,7 @@ import Card from "@/components/Card";
 import React from "react";
 import { Phone, Mail, House } from "lucide-react";
 import Button from "@/components/Button";
+import Link from "next/link";
 
 export default function ContactUs() {
 	return (
@@ -11,7 +12,7 @@ export default function ContactUs() {
 					GET IN TOUCH
 				</h3>
 
-				<div className="flex lg:flex-row flex-col gap-5 ">
+				<div className="flex lg:flex-row-reverse flex-col gap-5 ">
 					{/* Contact Details */}
 					<div className="lg:w-[50%] lg:h-[70vh]">
 						<p className="lg:text-normal text-normal-mobile font-roboto text-justify lg:tracking-text tracking-text-mobile">
@@ -21,24 +22,34 @@ export default function ContactUs() {
 							are here to support your requirements.
 						</p>
 						<div className="flex flex-col justify-evenly h-full">
-							<Card
-								icon={<Phone className="text-custom-yellow" size={30} />}
-								title="Contact"
-								info={"+91 95995 10490"}
-								type="info"
-							/>
-							<Card
-								icon={<Mail className="text-custom-yellow" size={30} />}
-								title="Email"
-								info={"aewmanish@gmail.com"}
-								type="info"
-							/>
-							<Card
-								icon={<House className="text-custom-yellow" size={30} />}
-								title="Address"
-								info="Anita Engineering Works, Shabad Daulatpur, Delhi – 110042, India"
-								type="info"
-							/>
+							<Link href={"https://wa.me/919599510490"}>
+								<Card
+									icon={<Phone className="text-custom-yellow" size={30} />}
+									title="Contact"
+									info={"+91 95995 10490"}
+									type="info"
+								/>
+							</Link>
+							<Link
+								href={
+									"https://mail.google.com/mail/?view=cm&fs=1&to=anitaengineeringworks@gmail.com"
+								}
+							>
+								<Card
+									icon={<Mail className="text-custom-yellow" size={30} />}
+									title="Email"
+									info={"aewmanish@gmail.com"}
+									type="info"
+								/>
+							</Link>
+							<Link href={"https://maps.app.goo.gl/xLMG6gpp44emdeJp7"}>
+								<Card
+									icon={<House className="text-custom-yellow" size={30} />}
+									title="Address"
+									info="Anita Engineering Works, Shabad Daulatpur, Delhi – 110042, India"
+									type="info"
+								/>
+							</Link>
 						</div>
 					</div>
 					{/* Contact Form */}
