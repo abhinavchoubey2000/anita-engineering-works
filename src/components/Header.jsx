@@ -2,23 +2,42 @@
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 import Logo from "./Logo";
+import { useRef, forwardRef } from "react";
 import { usePathname } from "next/navigation";
+import { useGSAP } from "@gsap/react";
+import { Animation } from "@/utils/animations";
+import gsap from "gsap";
 
-function Header({
-	listOfLinks = [],
-	bgColor,
-	className = "",
-	linkBgColorHover,
-	linkColorHover,
-}) {
+function Header(
+	{
+		listOfLinks = [],
+		bgColor,
+		className = "",
+		linkBgColorHover,
+		linkColorHover,
+	},
+	ref
+) {
 	const pathname = usePathname();
+	const logoAnim = new Animation();
+	const navAnim = new Animation();
+	
+	useGSAP(() => {
+		logoAnim.fadeDown(1.5, 20);
+		navAnim.fadeDown(1.5, 20);
+	});
+
 	return (
 		<>
 			<nav
+				ref={ref}
 				className={`${bgColor} sticky top-0 z-50 flex justify-between items-center px-10 ${className}`}
 			>
-				<div className="font-roboto text-normal gap-8 lg:flex hidden">
-					{listOfLinks.map((link) => (
+				<div
+					ref={navAnim.getRef()}
+					className="font-roboto text-normal gap-8 lg:flex hidden"
+				>
+					{listOfLinks.map((link, index) => (
 						<Link
 							key={link.path}
 							className={
@@ -37,7 +56,7 @@ function Header({
 					linkBgColorHover={"bg-black"}
 					linkColorHover={"text-white"}
 				/>
-				<Link href={"/"}>
+				<Link ref={logoAnim.getRef()} href={"/"}>
 					<Logo height={"70px"} width={"150px"} />
 				</Link>
 			</nav>
@@ -45,4 +64,4 @@ function Header({
 	);
 }
 
-export default Header;
+export default forwardRef(Header);

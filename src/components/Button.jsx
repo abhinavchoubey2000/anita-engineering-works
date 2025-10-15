@@ -1,17 +1,22 @@
 "use client";
 
 import React from "react";
+import { forwardRef } from "react";
 
-function Button({
-	label,
-	labelFontSize = "lg:text-normal text-normal-mobile",
-	bgColor = "bg-custom-yellow",
-	textColor = "text-black",
-	className = "",
-	handleClick = () => {},
-}) {
+function Button(
+	{
+		label,
+		labelFontSize = "lg:text-normal text-normal-mobile",
+		bgColor = "bg-custom-yellow",
+		textColor = "text-black",
+		className = "",
+		handleClick = () => {},
+	},
+	ref
+) {
 	return (
 		<button
+			ref={ref}
 			onClick={handleClick}
 			className={`${bgColor} ${textColor} ${labelFontSize} font-roboto tracking-text py-5 px-2 rounded-lg transition-all duration-500 cursor-pointer ${className}`}
 		>
@@ -20,4 +25,4 @@ function Button({
 	);
 }
 
-export default Button;
+export default forwardRef(Button);

@@ -26,7 +26,7 @@ export default function PunchCard({ punch, screw, screwDriver, title }) {
 
 		screwRef.current.style.borderBottomLeftRadius = "12px";
 		screwRef.current.style.borderBottomRightRadius = "12px";
-		screwRef.current.style.backgroundColor = "#f0b100";
+		screwRef.current.style.backgroundColor = " #60915e";
 		screwRef.current.style.transform = "translateY(0rem)";
 
 		screwDriverRef.current.style.borderTopLeftRadius = "12px";
@@ -51,7 +51,7 @@ export default function PunchCard({ punch, screw, screwDriver, title }) {
 
 			<div
 				ref={screwRef}
-				className="transition-all duration-500 flex justify-center items-center rounded-xl bg-yellow-500 py-10 w-full"
+				className="transition-all duration-500 flex justify-center items-center rounded-xl bg-[#60915e] py-10 w-full"
 			>
 				<Image
 					className={` object-contain w-[4rem] h-[7rem] lg:h-[7rem] `}
@@ -66,7 +66,7 @@ export default function PunchCard({ punch, screw, screwDriver, title }) {
 			</h3>
 			<div
 				ref={screwDriverRef}
-				className="flex justify-center items-center rounded-xl bg-custom-gray transition-all duration-500 py-10 w-full"
+				className="flex justify-center items-center rounded-xl bg-white transition-all duration-500 py-10 w-full"
 			>
 				<Image
 					className={` object-contain w-[4rem] h-[7rem] lg:h-[10rem]`}

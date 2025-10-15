@@ -1,3 +1,5 @@
+"use client";
+
 import {
 	Poppins,
 	Roboto,
@@ -6,6 +8,8 @@ import {
 	Merriweather,
 	Kanit,
 } from "next/font/google";
+import { useRef } from "react";
+import gsap from "gsap";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -32,13 +36,25 @@ const merriWeather = Merriweather({
 	subsets: ["latin"],
 });
 
-export const metadata = {
-	title: "Anita Engineering Works",
-	description:
-		"Anita Engineering Works, established in 1998, is a trusted name in the field of fastener manufacturing. We specialize in the production of screws, bolts, nuts, and precision fasteners designed for diverse industrial applications. With over two decades of expertise, we have developed a reputation for delivering quality, reliability, and consistency. Our modern facility is equipped with advanced headers, rolling machines, and BT cut machines. This infrastructure enables us to achieve high-volume production with uncompromised accuracy.",
-};
+// export const metadata = {
+// 	title: "Anita Engineering Works",
+// 	description:
+// 		"Anita Engineering Works, established in 1998, is a trusted name in the field of fastener manufacturing. We specialize in the production of screws, bolts, nuts, and precision fasteners designed for diverse industrial applications. With over two decades of expertise, we have developed a reputation for delivering quality, reliability, and consistency. Our modern facility is equipped with advanced headers, rolling machines, and BT cut machines. This infrastructure enables us to achieve high-volume production with uncompromised accuracy.",
+// };
 
 export default function RootLayout({ children }) {
+	const navRef = useRef(null);
+
+	gsap.from(navRef.current, {
+		backgroundColor: "blue",
+		duration: 1,
+		scrollTrigger: {
+			trigger: navRef.current,
+			start: "top top", // when navbar hits top of viewport
+			end: "+=700", // 200px scroll distance
+			scrub: true,
+		},
+	});
 	const navigationList = [
 		{
 			name: "Home",
@@ -108,6 +124,7 @@ export default function RootLayout({ children }) {
 		<html lang="en">
 			<body className={`${kanit.variable} ${bebasNeue.variable} antialiased`}>
 				<Header
+					ref={navRef}
 					listOfLinks={navigationList}
 					logo={"/images/logo.png"}
 					bgColor={"bg-custom-yellow"}
