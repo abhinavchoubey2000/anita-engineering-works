@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
-*{
+* {
 	transform: translateX();
+}
+html {
+	scroll-behavior: smooth;
 }
 @theme inline {
 	--font-poppins: var(--font-poppins);
@@ -10,7 +13,7 @@
 	/* Colors */
 	--color-custom-yellow: #75975e;
 	/* --color-custom-navigation::file-selector-button */
-	--color-custom-gray:#f5f5dc;
+	--color-custom-gray: #f5f5dc;
 	--color-light-text: #0000007d;
 
 	/* Tracking */

@@ -6,7 +6,6 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Animation } from "@/utils/animations";
-import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -67,87 +66,208 @@ export default function Home() {
 		"/images/partners/ola.png",
 		"/images/partners/vvdn.png",
 	];
-	const categoryRef = useRef(null);
-	const companyHeadingRef = useRef(null);
-	const companyTextRef = useRef(null);
 
 	// Banner Animations
-	const animHeading = new Animation();
-	const animSubHeading = new Animation();
-	const animButton = new Animation();
+	const bannerHeadingAnim = new Animation();
+	const bannerSubHeadingAnim = new Animation();
+	const bannerButtonAnim = new Animation();
+
+	// Category Animations
+	const categoryHeadingAnim = new Animation();
+	const categoryCardsAnim = new Animation();
+
+	// Company Animations
+	const companyHeadingAnim = new Animation();
+	const companyTextAnim = new Animation();
+
+	// Partners Animations
+	const partnersSectionAnim = new Animation();
+
+	// Certifications Animations
+	const certificationsHeading = new Animation();
+	const certificationText = new Animation();
+	const certificationCertificates = new Animation();
+
+	// Custom Fasteners Animations
+	const customFastenerHeading = new Animation();
+	const customFastenerSubHeading = new Animation();
+	const customFastenerButton = new Animation();
+
 	useGSAP(() => {
-		animHeading.fadeUp(1.5, 60);
-		animSubHeading.fadeUp(1.8, 60);
-		animButton.fadeUp(1, 100);
+		bannerHeadingAnim.fade("up", 1.5, 60);
+		bannerSubHeadingAnim.fade("up", 1.8, 60);
+		bannerButtonAnim.fade("up", 1, 200);
 
-		// Category Animations
-		const tl1 = gsap.timeline();
-		// Company Animations
-		const tl2 = gsap.timeline();
-		// Certifications Animations
-		const tl3 = gsap.timeline();
-		// Custom Fasteners Animations
-		const tl4 = gsap.timeline();
-		gsap.from(categoryRef.current, {
-			opacity: 0,
-			duration: 1,
-			delay: 3,
-			y: -50,
-			stagger: 1,
-			scrollTrigger: {
+		categoryHeadingAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
 				scroller: "body",
-				trigger: categoryRef.current,
-				start: "top 80%",
-				end: "bottom 50%",
 				scrub: 1,
-			},
-		});
-
-		gsap.from([companyHeadingRef.current, companyTextRef.current], {
-			opacity: 0,
-			duration: 1,
-			// delay: 3,
-			y: -50,
-			stagger: 1,
-			scrollTrigger: {
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		categoryCardsAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
 				scroller: "body",
-				trigger: "#company",
-				start: "top 100%",
-				end: "bottom 80%",
-			},
-		});
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
 
-		gsap.from(["#c-1", "#c-2", "#c-3", "#c-4"], {
-			opacity: 0,
-			duration: 1,
-			// delay: 2,
-			y: -50,
-			stagger: 1,
-			scrollTrigger: {
+		companyHeadingAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
 				scroller: "body",
-				trigger: "#certifications",
-				start: "top 20%",
-				end: "bottom 80%",
-			},
-		});
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		companyTextAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
 
-		gsap.from(["#f-1", "#f-2"], {
-			opacity: 0,
-			duration: 1,
-			// delay: 3,
-			y: -50,
-			stagger: 1,
-			scrollTrigger: {
+		partnersSectionAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
 				scroller: "body",
-				trigger: "#custom-fasteners",
-				start: "top 20%",
-				end: "bottom 80%",
-			},
-		});
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+
+		certificationsHeading.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		certificationText.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		certificationCertificates.fade(
+			"up",
+			2,
+			70,
+			"from",
+			true,
+			{ stagger: 2 },
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+
+		customFastenerHeading.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		customFastenerSubHeading.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		customFastenerButton.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
 	});
-
-	
-	
 
 	return (
 		<>
@@ -164,20 +284,20 @@ export default function Home() {
 				<div className="lg:h-screen w-full py-20 backdrop-blur-[10px] flex flex-col items-center justify-center">
 					<div className="flex flex-col items-center  lg:block">
 						<h1
-							ref={animHeading.getRef()}
+							ref={bannerHeadingAnim.getRef()}
 							className="main-heading lg:text-[6.5rem] lg:text-left lg:tracking-wide text-heading-banner-mobile text-center font-poppins text-white"
 						>
 							ANITA <span className="text-white">ENGINEERING</span> WORKS
 						</h1>
 						<h2
-							ref={animSubHeading.getRef()}
+							ref={bannerSubHeadingAnim.getRef()}
 							className="lg:text-sub-heading-banner lg:text-left text-center text-sub-heading-banner-mobile font-poppins text-white"
 						>
 							Precision <span className="text-white">fasteners</span> for every
 							industry
 						</h2>
 						<Button
-							ref={animButton.getRef()}
+							ref={bannerButtonAnim.getRef()}
 							label={"Find out more"}
 							className="hover:bg-black hover:text-white lg:px-14 lg:my-6 my-6 px-10"
 						/>
@@ -187,11 +307,14 @@ export default function Home() {
 
 			{/* Product Categories */}
 			<section className="bg-custom-gray lg:px-10 lg:py-12 px-2 py-4">
-				<h2 className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile">
+				<h2
+					ref={categoryHeadingAnim.getRef()}
+					className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile"
+				>
 					OUR PRODUCTS
 				</h2>
 				<div
-					ref={categoryRef}
+					ref={categoryCardsAnim.getRef()}
 					className="flex lg:flex-row flex-wrap lg:gap-10 gap-5 justify-center py-10"
 				>
 					<Card
@@ -219,13 +342,13 @@ export default function Home() {
 			>
 				<div className="lg:w-[50%] w-[100%] bg-custom-yellow lg:px-10 lg:py-12 px-2 py-4 flex flex-col gap-6">
 					<h2
-						ref={companyHeadingRef}
+						ref={companyHeadingAnim.getRef()}
 						className="lg:text-heading text-heading-mobile font-poppins text-white text-center"
 					>
 						Anita Engineering Works
 					</h2>
 					<p
-						ref={companyTextRef}
+						ref={companyTextAnim.getRef()}
 						className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify"
 					>
 						Anita Engineering Works, established in 1998, is a trusted name in
@@ -245,18 +368,20 @@ export default function Home() {
 			</section>
 
 			{/* Partners */}
-			<Partners logosArray={partners} />
+			<Partners ref={partnersSectionAnim.getRef()} logosArray={partners} />
 
 			{/* Certifications */}
 			<section id="certifications" className="bg-custom-gray">
 				<div className="lg:px-10 lg:py-12 px-2 py-4">
 					<h2
+						ref={certificationsHeading.getRef()}
 						id="c-1"
 						className="text-custom-yellow font-poppins lg:text-heading text-heading-mobile"
 					>
 						CERTIFICATIONS AND AUTHORIZATIONS
 					</h2>
 					<p
+						ref={certificationText.getRef()}
 						id="c-2"
 						className="lg:text-normal font-roboto lg:tracking-text text-normal-mobile tracking-text-mobile"
 					>
@@ -265,7 +390,10 @@ export default function Home() {
 						trusted in this industry.
 					</p>
 				</div>
-				<div className="flex flex-col items-center">
+				<div
+					ref={certificationCertificates.getRef()}
+					className="flex flex-col items-center"
+				>
 					<div className="flex lg:flex-row flex-col gap-20 py-12">
 						<Image
 							id="c-3"
@@ -293,7 +421,7 @@ export default function Home() {
 
 			{/* Custom Fastners */}
 			<section
-			id="custom-fasteners"
+				id="custom-fasteners"
 				style={{
 					background: "url(/images/home/custom-fastner.jpg)",
 				}}
@@ -310,15 +438,24 @@ export default function Home() {
 					className="px-10 py-22"
 				>
 					<div>
-						<h1 id="f-1" className="lg:text-sub-heading-banner text-sub-heading-banner-mobile font-poppins text-white">
+						<h1
+							ref={customFastenerHeading.getRef()}
+							id="f-1"
+							className="lg:text-sub-heading-banner text-sub-heading-banner-mobile font-poppins text-white"
+						>
 							DO YOU WANT YOUR{" "}
 							<span className="text-custom-yellow">CUSTOM FASTENERS</span> ?
 						</h1>
-						<h2 id="f-2" className="lg:text-[1.8rem] text-[1rem] py-6 font-poppins text-white self-start">
+						<h2
+							ref={customFastenerSubHeading.getRef()}
+							id="f-2"
+							className="lg:text-[1.8rem] text-[1rem] py-6 font-poppins text-white self-start"
+						>
 							Custom sizes, threading, head types, coatings, or CNC-turned parts
 							as per client drawing/specification.
 						</h2>
 						<Button
+							ref={customFastenerButton.getRef()}
 							label={"Contact Us"}
 							className="hover:bg-black hover:text-white px-14 my-6"
 						/>

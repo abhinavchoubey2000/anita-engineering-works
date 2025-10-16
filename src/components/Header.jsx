@@ -8,29 +8,25 @@ import { useGSAP } from "@gsap/react";
 import { Animation } from "@/utils/animations";
 import gsap from "gsap";
 
-function Header(
-	{
-		listOfLinks = [],
-		bgColor,
-		className = "",
-		linkBgColorHover,
-		linkColorHover,
-	},
-	ref
-) {
+function Header({
+	listOfLinks = [],
+	bgColor,
+	className = "",
+	linkBgColorHover,
+	linkColorHover,
+}) {
 	const pathname = usePathname();
 	const logoAnim = new Animation();
 	const navAnim = new Animation();
-	
+
 	useGSAP(() => {
-		logoAnim.fadeDown(1.5, 20);
-		navAnim.fadeDown(1.5, 20);
+		logoAnim.fade("down", 1.5, 20);
+		navAnim.fade("down", 1.5, 20);
 	});
 
 	return (
 		<>
 			<nav
-				ref={ref}
 				className={`${bgColor} sticky top-0 z-50 flex justify-between items-center px-10 ${className}`}
 			>
 				<div
@@ -64,4 +60,4 @@ function Header(
 	);
 }
 
-export default forwardRef(Header);
+export default Header;

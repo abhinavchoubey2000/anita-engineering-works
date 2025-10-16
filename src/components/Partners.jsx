@@ -2,10 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
+import { forwardRef } from "react";
 
-export default function Partners({ title, logosArray }) {
+function Partners({ title, logosArray }, ref) {
 	return (
-		<section className="w-full bg-white lg:py-12 py-4">
+		<section ref={ref} className="w-full bg-white lg:py-12 py-4">
 			{title && (
 				<h2 className="lg:px-10 px-2 lg:text-heading text-heading-mobile text-custom-yellow font-poppins">
 					{title}
@@ -41,8 +42,8 @@ export default function Partners({ title, logosArray }) {
 				.animate-marquee {
 					animation: marquee 50s linear infinite;
 				}
-
 			`}</style>
 		</section>
 	);
 }
+export default forwardRef(Partners);
