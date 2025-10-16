@@ -2,10 +2,10 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 class Animation {
-	constructor() {
+	constructor(ref = undefined) {
 		if (!gsap.core.globals().ScrollTrigger) gsap.registerPlugin(ScrollTrigger);
 		this.timeline = gsap.timeline();
-		this.ref = { current: null };
+		this.ref = ref ? ref : { current: null };
 		this.gsap = gsap;
 	}
 
@@ -35,7 +35,9 @@ class Animation {
 				? { y: -intensity }
 				: direction === "left"
 				? { x: -intensity }
-				: { x: intensity };
+				: direction === "right"
+				? { x: intensity }
+				: { x: 0, y: 0 };
 
 		const timelinePlaceholder = timeline ? "timeline" : "gsap";
 

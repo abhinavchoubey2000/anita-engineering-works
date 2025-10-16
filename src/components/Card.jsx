@@ -3,6 +3,8 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight, Info } from "lucide-react";
+import { Animation } from "@/utils/animations";
+import { useGSAP } from "@gsap/react";
 
 export default function Card({
 	type = "category",
@@ -19,27 +21,48 @@ export default function Card({
 	const productImageRef = useRef(null);
 	const infoRef = useRef(null);
 
+	const productTitleAnim = new Animation();
+	const productImageAnim = new Animation(productImageRef);
+
+	useGSAP(() => {
+		productImageAnim.fade(
+			"up",
+			2,
+			50,
+			"from",
+			true,
+			{ stagger: 1 },
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		productTitleAnim.fade(
+			"up",
+			2,
+			50,
+			"from",
+			true,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+	});
+
 	function handleMouseover(event) {
 		event.stopPropagation();
-
-		const computedStyle = window.getComputedStyle(productImageRef.current);
-		const rotate = computedStyle.rotate;
-
-		if (rotate === "0deg") {
-			productImageRef.current.style.rotate = "-45deg";
-		} else {
-			productImageRef.current.style.rotate = "0deg";
-		}
+		productImageRef.current.style.rotate = "-45deg";
 	}
-
 	function handleMouseout() {
-		const computedStyle = window.getComputedStyle(productImageRef.current);
-		const rotate = computedStyle.rotate;
-		if (rotate === "-45deg") {
-			productImageRef.current.style.rotate = "0deg";
-		} else {
-			productImageRef.current.style.rotate = "45deg";
-		}
+		productImageRef.current.style.rotate = "0deg";
 	}
 	function handleInfoMouseover() {
 		infoRef.current.style.display = "block";
@@ -95,15 +118,12 @@ export default function Card({
 			onMouseOut={handleMouseout}
 			className="lg:px-5 lg:py-3 px-2 py-2 bg-white lg:w-sm w-[10rem] inline-flex flex-col rounded-lg hover:shadow-2xl transition-all duration-300 hover:scale-[1.005] relative"
 		>
-			<div className="px-5 flex flex-col py-3">
+			<div ref={productTitleAnim.getRef()} className="px-5 flex flex-col py-3">
 				<h3 className="lg:text-[2rem] text-[1.2rem] font-roboto lg:tracking-text tracking-text-mobile">
 					{title}
 				</h3>
 			</div>
 			<Image
-				style={{
-					rotate: rotation ? "45deg" : "0deg",
-				}}
 				ref={productImageRef}
 				className={`self-center object-contain lg:w-[8rem] h-[5rem] lg:h-[10rem]`}
 				src={image}

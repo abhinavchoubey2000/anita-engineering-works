@@ -1,4 +1,7 @@
+"use client";
 import React from "react";
+import { Animation } from "@/utils/animations";
+import { useGSAP } from "@gsap/react";
 
 export default function Banner({
 	children,
@@ -6,6 +9,10 @@ export default function Banner({
 	height = "h-full",
 	blur = "10px",
 }) {
+	const bannerAnim = new Animation();
+	useGSAP(() => {
+		bannerAnim.fade("none", 1, 60);
+	});
 	return (
 		<div
 			style={{
@@ -15,6 +22,7 @@ export default function Banner({
 			}}
 		>
 			<div
+				ref={bannerAnim.getRef()}
 				className={`w-full lg:${height} py-20 backdrop-blur-[${blur}] flex flex-col items-center justify-center`}
 			>
 				{children}

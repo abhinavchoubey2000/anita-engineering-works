@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Logo from "./Logo";
 import Link from "next/link";
@@ -11,8 +9,12 @@ export default function Footer({
 	linksRow2,
 	contactDetails,
 }) {
+
+
 	return (
-		<div className="px-10 py-10 flex lg:flex-row flex-col gap-15">
+		<div
+			className="px-10 py-10 flex lg:flex-row flex-col gap-15"
+		>
 			<div className="logo-description lg:w-[25%] w-full font-roboto text-normal flex flex-col gap-6">
 				<Logo />
 				<p className="text-[14px] tracking-[2px]">{description}</p>
