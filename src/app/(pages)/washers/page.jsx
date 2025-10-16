@@ -1,16 +1,32 @@
+"use client";
 import React from "react";
 import Card from "@/components/Card";
 import WashersData from "@/utils/data/washers.json";
+import { Animation } from "@/utils/animations";
+import { useGSAP } from "@gsap/react";
 
 export default function Washers() {
+	const washerHeadingAnim = new Animation();
+	const washerTextAnim = new Animation();
+
+	useGSAP(() => {
+		washerHeadingAnim.fade("up", 2, 50);
+		washerTextAnim.fade("up", 2, 50, "from", false, { delay: 0.8 });
+	});
 	return (
 		<>
 			<section className="bg-custom-gray lg:px-10 lg:py-12 px-2 py-4">
 				<div>
-					<h1 className="text-custom-yellow lg:text-heading text-heading-mobile lg:tracking-text tracking-text-mobile font-poppins ">
+					<h1
+						ref={washerHeadingAnim.getRef()}
+						className="text-custom-yellow lg:text-heading text-heading-mobile lg:tracking-text tracking-text-mobile font-poppins "
+					>
 						WASHERS
 					</h1>
-					<p className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify">
+					<p
+						ref={washerTextAnim.getRef()}
+						className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify"
+					>
 						Washers are essential fastening components designed to distribute
 						load, prevent loosening, and protect surfaces during assembly. They
 						ensure secure and stable connections in mechanical and industrial

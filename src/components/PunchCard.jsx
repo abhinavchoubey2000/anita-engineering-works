@@ -1,11 +1,32 @@
 "use client";
 import Image from "next/image";
 import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { Animation } from "@/utils/animations";
 
 export default function PunchCard({ punch, screw, screwDriver, title }) {
 	const screwRef = useRef(null);
 	const screwDriverRef = useRef(null);
 	const punchRef = useRef(null);
+
+	const punchCardAnim = new Animation();
+	useGSAP(() => {
+		punchCardAnim.fade(
+			"up",
+			2,
+			60,
+			"from",
+			true,
+			{ stagger: 1 },
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+	});
 
 	function handleMouseOver() {
 		punchRef.current.style.transform = "rotate(360deg)";
@@ -36,6 +57,7 @@ export default function PunchCard({ punch, screw, screwDriver, title }) {
 	}
 	return (
 		<div
+			ref={punchCardAnim.getRef()}
 			className="lg:w-[10rem] w-[8rem] flex justify-around items-center flex-col"
 			onMouseOver={handleMouseOver}
 			onMouseOut={handleMouseOut}

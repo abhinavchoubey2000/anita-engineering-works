@@ -18,7 +18,7 @@ function Button(
 		<button
 			ref={ref}
 			onClick={handleClick}
-			className={`${bgColor} ${textColor} ${labelFontSize} font-roboto tracking-text py-5 px-2 rounded-lg transition-all duration-500 cursor-pointer ${className}`}
+			className={`${bgColor} ${textColor} ${labelFontSize} font-roboto tracking-text py-5 px-2 rounded-lg cursor-pointer ${className}`}
 		>
 			{label}
 		</button>

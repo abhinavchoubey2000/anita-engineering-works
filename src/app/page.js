@@ -96,7 +96,7 @@ export default function Home() {
 	useGSAP(() => {
 		bannerHeadingAnim.fade("up", 1.5, 60);
 		bannerSubHeadingAnim.fade("up", 1.8, 60);
-		bannerButtonAnim.fade("up", 1, 200);
+		bannerButtonAnim.fade("up", 2, 60);
 
 		categoryHeadingAnim.fade(
 			"up",

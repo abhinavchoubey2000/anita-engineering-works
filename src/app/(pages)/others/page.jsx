@@ -1,20 +1,135 @@
+"use client";
 import React from "react";
 import Card from "@/components/Card";
 import NutsData from "@/utils/data/nuts.json";
 import SpacersData from "@/utils/data/spacers.json";
 import AllenKeysData from "@/utils/data/allen-keys.json";
 import ThreadData from "@/utils/data/threads.json";
+import { Animation } from "@/utils/animations";
+import { useGSAP } from "@gsap/react";
 
 export default function Others() {
+	const nutHeadingAnim = new Animation();
+	const nutTextAnim = new Animation();
+	const spacerHeadingAnim = new Animation();
+	const spacerTextAnim = new Animation();
+	const allenKeyHeadingAnim = new Animation();
+	const allenKeyTextAnim = new Animation();
+	const threadHeadingAnim = new Animation();
+	const threadTextAnim = new Animation();
+
+	useGSAP(() => {
+		nutHeadingAnim.fade("up", 2, 50);
+		nutTextAnim.fade("up", 2, 50, "from", false, { delay: 0.8 });
+
+		spacerHeadingAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		spacerTextAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+
+		allenKeyHeadingAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		allenKeyTextAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+
+		threadHeadingAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+		threadTextAnim.fade(
+			"up",
+			2,
+			70,
+			"from",
+			false,
+			{},
+			{
+				scroller: "body",
+				scrub: 1,
+				start: "top 90%",
+				end: "bottom 70%",
+				delay: 2,
+			}
+		);
+	});
 	return (
 		<>
 			{/* Nuts */}
 			<section className="bg-custom-gray lg:px-10 lg:py-12 px-2 py-4">
 				<div>
-					<h1 className="text-custom-yellow lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins ">
+					<h1
+						ref={nutHeadingAnim.getRef()}
+						className="text-custom-yellow lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins "
+					>
 						NUTS
 					</h1>
-					<p className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify">
+					<p
+						ref={nutTextAnim.getRef()}
+						className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify"
+					>
 						Nuts are vital fastening components designed to secure bolts and
 						screws, creating strong, reliable joints in machinery and structural
 						assemblies. They play a key role in maintaining stability and safety
@@ -45,10 +160,16 @@ export default function Others() {
 			{/* Spacers */}
 			<section className="bg-custom-yellow lg:px-10 lg:py-12 px-2 py-4">
 				<div>
-					<h1 className="text-custom-gray lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins ">
+					<h1
+						ref={spacerHeadingAnim.getRef()}
+						className="text-custom-gray lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins "
+					>
 						SPACERS
 					</h1>
-					<p className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify">
+					<p
+						ref={spacerTextAnim.getRef()}
+						className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify"
+					>
 						Spacers are precision-engineered components used to maintain a
 						specific distance or gap between two parts in an assembly. They
 						ensure proper alignment, load distribution, and smooth functioning
@@ -79,10 +200,16 @@ export default function Others() {
 			{/* Allen Keys */}
 			<section className="bg-custom-gray lg:px-10 lg:py-12 px-2 py-4">
 				<div>
-					<h1 className="text-custom-yellow lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins ">
+					<h1
+						ref={allenKeyHeadingAnim.getRef()}
+						className="text-custom-yellow lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins "
+					>
 						Allen Keys
 					</h1>
-					<p className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify">
+					<p
+						ref={allenKeyTextAnim.getRef()}
+						className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify"
+					>
 						Allen Keys, also known as hex keys, are L-shaped tools designed to
 						drive screws and bolts with hexagonal sockets. They provide
 						excellent torque control and easy access to confined spaces. Anita
@@ -112,10 +239,16 @@ export default function Others() {
 			{/* Thread */}
 			<section className="bg-custom-yellow lg:px-10 lg:py-12 px-2 py-4">
 				<div>
-					<h1 className="text-custom-gray lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins ">
+					<h1
+						ref={threadHeadingAnim.getRef()}
+						className="text-custom-gray lg:text-heading lg:tracking-text text-heading-mobile tracking-text-mobile font-poppins "
+					>
 						THREAD
 					</h1>
-					<p className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify">
+					<p
+						ref={threadTextAnim.getRef()}
+						className="lg:text-normal text-normal-mobile font-roboto lg:tracking-text tracking-text-mobile text-justify"
+					>
 						Threads are the helical grooves cut or rolled onto screws, bolts, or
 						studs that allow them to fasten materials securely. In screw making,
 						threads are critical as they determine the holding strength,
