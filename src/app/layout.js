@@ -53,6 +53,10 @@ export default function RootLayout({ children }) {
 			path: "/washers",
 		},
 		{
+			name: "Clamps",
+			path: "/clamps",
+		},
+		{
 			name: "Others",
 			path: "/others",
 		},

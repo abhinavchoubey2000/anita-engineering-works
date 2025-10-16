@@ -1,0 +1,38 @@
+[
+	{
+		"name": "Hose",
+		"description": "Hose clamps provide a secure seal between hoses and fittings, preventing leakage under pressure. Made from durable steel, they ensure tight connections in automotive, plumbing, and industrial applications.",
+		"path": "/images/clamps/Hose-Clamp.png",
+		"rotation": true
+	},
+	{
+		"name": "L Shape Angle Bracket",
+		"description": "L Shape Angle Brackets offer strong right-angle support for joining structures. Crafted from sturdy metal, they ensure stability in shelving, framing, and machinery assemblies, ideal for load-bearing connections.",
+		"path": "/images/clamps/L_shape_Angle_bracket.png",
+		"rotation": true
+	},
+	{
+		"name": "Split",
+		"description": "Split clamps feature a two-piece design for easy installation and firm grip on cylindrical components. Commonly used in shafts, pipes, and rods, they provide secure, adjustable, and reusable fastening.",
+		"path": "/images/clamps/Split_Clamp.png",
+		"rotation": true
+	},
+	{
+		"name": "Spring",
+		"description": "Spring clamps use tensioned springs for instant gripping power. Lightweight yet durable, they’re ideal for woodworking, gluing, and holding materials temporarily during assembly or repair processes.",
+		"path": "/images/clamps/Spring_clamp.png",
+		"rotation": true
+	},
+	{
+		"name": "U Bolt",
+		"description": "U bolt clamps feature a U-shaped bolt with threaded ends to fasten pipes, tubes, or cables. They provide robust support and alignment in plumbing, automotive, and construction applications.",
+		"path": "/images/clamps/U_Bolt_Clamp.png",
+		"rotation": true
+	},
+	{
+		"name": "U Type Pipe",
+		"description": "U Type Pipe Clamps securely hold pipes against walls or frames. Made from corrosion-resistant steel, they ensure vibration-free, stable pipe installations in plumbing, industrial, and mechanical systems.",
+		"path": "/images/clamps/U_Type_pipe_clamps.png",
+		"rotation": true
+	}
+]

@@ -2,11 +2,9 @@
 import Link from "next/link";
 import Sidebar from "./Sidebar";
 import Logo from "./Logo";
-import { useRef, forwardRef } from "react";
 import { usePathname } from "next/navigation";
 import { useGSAP } from "@gsap/react";
 import { Animation } from "@/utils/animations";
-import gsap from "gsap";
 
 function Header({
 	listOfLinks = [],
